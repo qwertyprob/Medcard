@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetAsist</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- твоё модальное окно для добавления, можно и для изменения сделать, это уже в js-->
+    <div id="popup" class="popup disable"> 
+        <div class="popup__box">
+            <input placeholder="ФИО" type="text" id="name">
+            <input placeholder="Порода" type="text" id="breed">
+            <input placeholder="Номер чипа" type="text" id="chip">
+            <input placeholder="Возраст" type="text" id="age">
+            <input placeholder="Кличка" type="text" id="nick">
+            <input placeholder="Препараты" type="text" id="drugs">
+            <input placeholder="Проведенное лечение" type="text" id="heal">
+            <button id="popup-btn" type="submit">Отправить</button>
+        </div>
+    </div>
+    <header class="header">
+        <div class="logo shadow"><img src="images\logo.png" alt="VetAsist"></div>
+        <div class="dark-mode">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+              <span class="ball"></span>
+            </label>
+          </div>
+        <button id="Add" class="btn-input">Добавить</button>
+    </header>
+
+    <div class="search">
+        <div class="search__box search-border">
+            <input placeholder="Поиск" class="search__field__input search-border" type="search" id="search" name="search">
+            <button class="search__field__btn search-border" type="button">Найти</button>
+        </div>
+    </div>
+
+    <section class="list">
+        <div class="list__wrapper shadow">
+            <div class="list__line-title">
+                <p class="number">№</p>
+                <p class="name">ФИО</p>
+                <p class="breed">Порода</p>
+                <p class="chip">Номер чипа</p>
+                <p class="age">Возраст</p>
+                <p class="nick">Кличка</p>
+                <p class="drugs">Препараты</p>
+                <p class="heal">Проведенное лечение</p>
+                <p class="heal">Параметры</p>
+            </div>
+            <!-- сюда дальше добавляются из js -->
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
