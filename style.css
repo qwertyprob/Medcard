@@ -21,7 +21,11 @@ body{
     padding-top: 10px;
 }
 .dark{
-    background: #434141 !important;
+    background: #20294a !important;
+    transition: all ease-in-out .3s;
+}
+.dark_white{
+    color: #fff;
     transition: all ease-in-out .3s;
 }
 .dark-popup{
@@ -98,17 +102,18 @@ body{
 .shadow{
     box-shadow: 0px 0px 70px grey;
 }
-
+.header {
+    background-color: #20294a;
+}
 .header .btn-input{
     width: 15rem;
     height: 3rem;
     border-radius: 10px;
-    background: rgb(102, 190, 102);
     border: solid grey 1px;
     font-size: 1.2rem;
     transition: all ease .3s;
 }
-.header .btn-input:hover{background: lightgreen;}
+.header .btn-input:hover{background: lightblue;}
 
 .logo ,.logo img{
     width: 20em;
@@ -203,7 +208,7 @@ body{
     gap: 20px;
 }
 .list .list__param div{
-    background: lightgreen;
+    background: white;
     cursor: pointer;
     border-radius: 5px;
 }
@@ -213,7 +218,7 @@ body{
 }
 .list-dark > * {
     color: rgb(0, 0, 0);
-    background-color: #666;
+    background-color: #aacacf;
     transition: all ease-in-out .3s;
 }
 
@@ -222,5 +227,47 @@ body{
     border-right-color: #fff;
     border-top-color: #fff;
     border-left-color: #fff;
+}
+
+
+
+/* template-more */
+
+.card{
+    width: 100%;
+}
+.main{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    min-height: 80vh;
+}
+
+.main__column1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    border-right: 1px grey solid;
+}
+
+.main__column2{
+    flex: 4;
+}
+
+.main__elem{
+    font-size: 2em;
+    text-align: center;
+    border-bottom: 1px grey solid;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.main__column2 .main__elem{
+    text-align: left;
+    height: 50%;
+    font-size: 1.6em;
 }
 

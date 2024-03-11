@@ -80,15 +80,14 @@ window.addEventListener('load', () => {
     const checkbox = document.getElementById("checkbox")
     checkbox.addEventListener("change", () => {
         const l = document.querySelector('.list');
-        const logo = document.querySelector('.logo');
-
+        const c = document.querySelector('.card');
         if (popup) {
             const p = popup.querySelector(".popup__box");
             p?.classList.toggle('dark-popup');
         }
         l?.classList.toggle('list-dark');
         list?.classList.toggle('shadow');
-        logo?.classList.toggle('shadow');
+        c?.classList.toggle('dark_white');
         document.body.classList.toggle("dark");
         
     })
