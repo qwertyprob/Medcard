@@ -237,11 +237,21 @@ body{
     width: 100%;
 }
 .main{
-    width: 100%;
+    width: 90%;
     position: relative;
     display: flex;
     flex-flow: row;
     min-height: 80vh;
+    margin: 50px auto 0 auto;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: white;
+}
+
+.card .main__title{
+    font-size: 2.6em;
+    margin: 40px;
+    text-align: center;
 }
 
 .main__column1{
@@ -264,6 +274,7 @@ body{
     padding: 20px;
     flex-grow: 1;
 }
+
 
 .main__column2 .main__elem{
     text-align: left;
