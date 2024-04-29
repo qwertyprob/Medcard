@@ -1,0 +1,53 @@
+﻿@page "/Main/Medcard/{Id}"
+@model Medcard.Pages.MedcardPage.Template_moreModel
+@{
+    ViewData["Title"] = "Medcard";   
+}
+@foreach (var item in Model.medcard)
+{
+<header class="header">
+    <div class="logo"><a asp-page="/Index"><img src="~/img/logo.png" alt="VetAsist"></a></div>
+    <div class="dark-mode">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label  for="checkbox" class="checkbox-label">
+            <span class="ball"></span>
+        </label>
+    </div>
+        <form method="POST" action="/Main/Medcard/Update/@item.Id">
+            <input type="hidden" name="id" value="@item.Id">
+            <button id="newChange" type="submit" class="btn-input">Изменить</button>
+        </form>
+
+    </header>
+<section class="card">
+    <div id="main" class="main shadow">
+        <div class="main__column1">
+                <div class="main__elem" id="client-name"><strong>Фио</strong>:@item.Name</div>
+                <div class="main__elem" id="phone-number"><strong>Телефон</strong>:@item.PhoneNumber</div>
+                <div class="main__elem" id="pet-name"><strong>Кличка</strong>:@item.PetName</div>
+                <div class="main__elem" id="chip-number"><strong>Чип</strong>:@item.ChipNumber</div>
+                <div class="main__elem" id="pet-age"><strong>Возраст</strong>:@item.Age</div>
+                <div class="main__elem" id="pet-breed"><strong>Порода</strong>:@item.Breed</div>
+                
+        </div>
+        
+        <div class="main__column2">
+            <div class="main__elem" id="drugs">
+                <h1>Препараты</h1>ipsum dolor sit amet consectetur adipisicing elit. Quas recusandae facilis dolor consectetur adipisci magni sequi. Perferendis quam atque ducimus tempora eum explicabo fugit eveniet? Perferendis sapiente soluta quam illo.
+                Explicabo consequatur sint quod eum tempore maxime, dolore unde voluptas nisi officia officiis eos architecto ab cum autem voluptatibus! Ea ullam repudiandae labore pariatur fuga itaque iure magni quas quia.
+                Tempora, a cum incidunt aut possimus dolorem! Soluta sed in placeat esse quisquam voluptatum. Perferendis magni similique porro atque at tempore esse perspiciatis, eos rerum soluta iusto quam facere incidunt.
+                Provident fuga esse explicabo quas voluptate? Reiciendis nam non, hic totam ab sequi, odio, vel ad vero perferendis impedit autem et inventore nesciunt debitis perspiciatis quo aut amet culpa? Dolore!
+            </div>
+            <div class="main__elem" id="treatment">
+                <h1>Лечение</h1> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae vitae quis ipsum accusamus iste quo necessitatibus, explicabo doloribus ipsam rerum minus temporibus deleniti magnam id vel similique alias voluptate delectus!
+                Officiis quasi provident deserunt. Est eos dolorem, corporis obcaecati, harum perspiciatis fugiat, omnis quod quis doloribus esse recusandae magni quisquam dolorum consequuntur blanditiis tenetur commodi provident dolore placeat laudantium rem.
+                Voluptate vel aut unde, dolorem odio fugiat voluptates dolore esse architecto ut hic, temporibus id natus quidem veritatis beatae, veniam dicta. Id aut ad vero nostrum atque, eveniet nesciunt quia.
+                Recusandae dolore repudiandae accusamus ea rerum qui dolorum, ipsum voluptatem libero fugiat esse mollitia deserunt sint temporibus fugit laborum cum voluptates perferendis corrupti, eaque quidem magni iure soluta. Maxime, rem?
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</section>
+}
