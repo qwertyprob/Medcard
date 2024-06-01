@@ -1,4 +1,7 @@
-﻿'use strict';
+'use strict';
+
+
+
 
 window.addEventListener('load', () => {
     const btnAdd = document.getElementById("Add");
@@ -42,7 +45,28 @@ window.addEventListener('load', () => {
             </div>
             но в js переменных 
             */
-            
+            let name = document.createElement('p');
+            name.classList.add('name');
+            let chip = document.createElement('p');
+            chip.classList.add('chip');
+            let nick = document.createElement('p');
+            nick.classList.add('nick');
+            let param = document.createElement('div');
+            let change = document.createElement('div');
+            let remove = document.createElement('div');
+            param.classList.add('list__param');
+            param.appendChild(change);
+            param.appendChild(remove);
+            change.classList.add('list__more');
+            remove.classList.add('list__remove');
+            change.textContent = 'Подробней';
+            remove.textContent = 'Удалить';
+
+            divList.appendChild(number);
+            divList.appendChild(name);
+            divList.appendChild(chip);
+            divList.appendChild(nick);
+            divList.appendChild(param);
 
             let i = 1;
             text.forEach(element => {
@@ -55,6 +79,7 @@ window.addEventListener('load', () => {
             popup.click();// закрываем окно
         };
     }
+
 
     const checkbox = document.getElementById("checkbox")
     checkbox.addEventListener("change", () => {
@@ -70,6 +95,26 @@ window.addEventListener('load', () => {
         document.body.classList.toggle("dark");
         m?.classList.toggle('shadow');
         mTitle?.classList.toggle('dark_white');
+    })
+
+
+    // кнопка изменения
+    const btn_change = document.querySelector("#newChange");
+    btn_change.addEventListener("click", () => {
+        const item_input = document.querySelectorAll('.main__column2 .main__elem-input');
+        const item_elem = document.querySelectorAll('.main__column2 .main__elem');
+        const btn_save = document.querySelector('#saveButton');
+        btn_save.classList.toggle('disable');
+        item_input.forEach((input, index) => {
+
+            input.classList.toggle('disable');
+            item_elem[index].classList.toggle('disable');
+
+            const textContent = item_elem[index].textContent;
+
+            input.value = textContent;
+        });
+
     })
 
 
