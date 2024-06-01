@@ -1,4 +1,4 @@
-﻿
+
 
 
 * {
@@ -85,7 +85,7 @@ body {
 }
 
 .disable {
-    display: none;
+    display: none !important;
 }
 
 .popup .popup__box {
@@ -106,7 +106,6 @@ body {
         width: 50%;
         height: 2rem;
         font-size: 1.5em;
-
     }
 
 .shadow {
@@ -257,7 +256,6 @@ body {
 
 .card {
     width: 100%;
-    
 }
 
 .main {
@@ -285,11 +283,18 @@ body {
     justify-content: space-around;
     gap: 20px;
     border-right: 1px grey solid;
+    min-height: 400px;
 }
 
 .main__column2 {
     flex: 4;
+    min-height: 400px;
 }
+
+    .main__column2 > h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
 
 .main__elem {
     font-size: 2em;
@@ -298,6 +303,32 @@ body {
     padding: 20px;
     flex-grow: 1;
 }
+
+.main__elem-input {
+    display: block;
+    font-size: 1.5em;
+    text-align: center;
+    border: none;
+    padding: 20px;
+    width: 100%;
+    resize: none;
+    height: 40%;
+}
+
+.main__column2 #saveButton {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
 
 .main__column2 .main__elem {
     text-align: left;
@@ -323,7 +354,7 @@ body {
     }
 
 .list__remove {
-    border-radius:6px;
+    border-radius: 6px;
     width: 50%;
     background-color: lightblue;
     color: white;
@@ -338,4 +369,3 @@ body {
     .list__remove:hover {
         background-color: #ab0237;
     }
-
